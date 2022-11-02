@@ -1,0 +1,263 @@
+1. palindrome number
+=======================
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        //System.out.println("Hello, World!");
+        //121 if you reverse a number again it will be same
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        int org_num=num;
+        int rev=0;
+        while(num!=0)
+        {
+           rev= rev*10+num%10;
+            num=num/10;
+        }
+        if(org_num==rev){
+            System.out.println(org_num+": palindrome number");
+        }else
+        {
+            System.out.println(org_num+": Not a palindrome number");
+        }
+        
+    }
+}
+===========================================================================================
+2. Palindrome string
+--------------------
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        //System.out.println("Hello, World!");
+        //MADAM if you reverse a number again it will be same
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a name:");
+        String name=sc.next();
+        String org_name=name;
+        String rev=" ";
+        int len=name.length();
+        
+          for(int i=len-1;i>=0;i--){
+              rev=rev+name.charAt(i);
+              
+          }
+          if(org_name.equals(rev)){
+            System.out.println(org_name+": palindrome string");  
+          }
+            
+        else
+        {
+            System.out.println(org_name+": Not a palindrome string");
+        }
+        
+    }
+}
+=========================================================================================================
+    class CountNumberOfDigits {
+    public static void main(String[] args) {
+    int num=12345879;
+    int count=0;
+    while(num>0){
+        num=num/10;
+        count++;
+    }
+    System.out.println("NumberOfDigits:"+count);
+    }
+}
+===========================================================================================================
+EvenOddNumbers 
+
+class EvenOddNumbers {
+    public static void main(String[] args) {
+    int num=12683479;
+    int even_count=0;
+    int odd_count=0;
+    while(num>0){
+        int rem=num%10;
+        if(rem%2==0){
+            even_count++;
+        }
+        else
+        {
+           odd_count++; 
+        }
+        num=num/10;
+        }
+        System.out.println(even_count);
+        System.out.println(odd_count);
+    }
+}
+
+==============================================================================================================
+class countsumofdigits {
+    public static void main(String[] args) {
+    int num=123456789;
+    int sum=0;
+    while(num>0){
+     sum=sum+num%10;
+     num=num/10;
+    }
+    System.out.println(sum);
+    }
+}
+
+=================================================================================================================
+
+    import java.util.Scanner;
+    class largest3numbers {
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter a number:");
+    int a=sc.nextInt();
+    System.out.println("Enter a number:");
+    int b=sc.nextInt();
+    System.out.println("Enter a number:");
+    int c=sc.nextInt();
+    
+    if(a>b && a>c)
+    {
+       System.out.println(a+ " is largest number"); 
+    }
+    else{
+        
+        if(b>a && b>c){
+     System.out.println(b+ " is largest number");
+        }
+        else
+        {
+            System.out.println(c+ " is largest number");
+        }
+    }   
+              
+    }
+}
+======================================================================================================================
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+    String s="nagabhushan";
+    int len=s.length()-1;
+    char[] ch =s.toCharArray();
+    for(int i=0;i<=len;i++)
+    {
+     for(int j=i+1;j<=len;j++)  
+     {
+         
+         if(ch[i]==ch[j])
+         {
+             System.out.println(ch[j]);
+         }
+     } 
+    }
+    }
+}
+==========================================================================================================================
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        //System.out.println("Hello, World!");
+        
+        int a=0, b=1,sum=0;
+        System.out.println(a+" "+b);
+        for(int i=2;i<20;i++){
+        sum=a+b;  //1
+        System.out.println(" "+sum);
+        a=b;
+        b=sum;
+    }
+}
+}
+======================================================================================================================
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int num=4;
+        int factorial=1;
+        for(int i=1;i<=num;i++)
+        {
+            factorial=factorial*i;
+        }
+        System.out.println("factorial number is:"+ factorial);
+    }
+}
+================================================================================================================================
+
+class Reversewordinastring {
+    public static void main(String[] args) {
+    //System.out.println("Hello, World!");
+    String s="welcome to java";
+    String[] words=s.split(" ");
+    String reverseString=" ";
+    for(String w:words){
+    String reverseword="";
+    for(int i=w.length()-1;i>=0;i--){
+        reverseword=reverseword+w.charAt(i);
+    }    
+     reverseString=reverseString+reverseword+" ";
+     
+    }
+    System.out.println(reverseString);
+        
+    }
+}
+=====================================================================================================================================
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class MissingNumber {
+    public static void main(String[] args) {
+       // System.out.println("Hello, World!");
+       int[] a={1,2,3,5,6};
+       int sum1=0;
+       for(int i=0;i<a.length;i++){
+           sum1=sum1+a[i];
+       }
+       int sum2=0;
+       for(int i=1;i<=6;i++){
+           sum2=sum2+i;
+       }
+    System.out.println(sum2);
+    System.out.println("Missing number is:" + (sum2-sum1));
+}
+}
+==============================================================================================================================================
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class ExtractEvenandoddnumbers {
+    public static void main(String[] args) {
+        //System.out.println("Hello, World!");
+        int a[]={1,2,9,8};
+        System.out.println("even numbers");
+        for(int i=0;i<a.length;i++){
+            if(a[i]%2==0){
+                System.out.println(a[i]);
+            }
+            System.out.println("odd numbers");
+            for(int i=0;i<a.length;i++){
+                if(a[i]%2!=0){
+                System.out.println(a[i]);
+            }
+            
+        }
+    }
+ }
+}
+
+
+
+
+
+
