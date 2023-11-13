@@ -1,0 +1,17 @@
+
+public class DuplicateElementsinAnArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] str= {"corejava","selenium", "cucumber", "Rest", "sql", "corejava", "sql"};
+		for(int i=0;i<str.length;i++) {
+			for(int j=i+1;j<str.length;j++) {
+				if(str[i].equals(str[j])) {
+					System.out.println(str[i]);
+				}
+			}
+		}
+
+	}
+
+}
